@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./Styles/styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./Styles/slider.css">
+  <link rel="stylesheet" href="./Styles/checkboxes.css">
+
+  <title>Frontend Mentor | Password generator app</title>
+</head>
+
+<body>
+
+  <main>
+
+    <div class="app-container">
+
+      <h1>Password Generator</h1>
+
+
+      <div class="heading-container">
+
+        <span id="output">P4$5W0rD!</span>
+
+        <img id="copy-btn" src="./starter-code/assets/images/icon-copy.svg" alt="Copy Button">
+
+      </div>
+
+
+      <div class="main-container">
+
+        <div class="slider-container">
+          <div class="length-container">
+          <span>Character Length</span>
+          <span id="range-slider__value" class="green-text">10</span>
+          </div>
+          <input id="myinput" min="0" max="100" type="range" value="50" />
+        </div>
+
+        <div class="checkbox-container">
+          <div class="check-child">
+
+          
+          <label class="container" for="uppercase">Include Uppercase Letters
+          <input type="checkbox" id="uppercase" name="uppercase" value="Uppercase Letters">
+          <span class="checkmark"></span>
+          </label>
+          <br>
+
+          </div>
+
+          <div class="check-child">
+
+            
+
+            <label class="container" for="lowercase">Include Lowercase Letters
+
+              <input type="checkbox" id="lowercase" name="lowercase" value="Lowercase Letters">
+              <span class="checkmark"></span>
+            </label><br>
+
+            </div>
+
+            <div class="check-child">
+
+              
+
+              <label class="container" for="numbers">Include Numbers
+                <input type="checkbox" id="numbers" name="numbers" value="Number">
+                <span class="checkmark"></span>
+              </label><br>
+
+              </div>
+
+              <div class="check-child">
+
+                
+
+                <label class="container" for="symbols">Include Symbols
+                  <input type="checkbox" id="symbols" name="symbols" value="Symbol">
+                  <span class="checkmark"></span>
+
+                </label><br>
+
+                </div>
+        </div>
+
+        <div class="strength-container">
+
+          <span id="str-text">Strength</span>
+
+          <div class="strength-child">
+          <span>MEDIUM</span>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+
+
+          </div>
+
+        </div>
+        <div class="button-wrapper">
+        <button class="btn-2">Generate<span><img src='./starter-code/assets/images/icon-arrow-right.svg'></span></button>
+        <div class="button-effect"></div>
+          </div>
+      </div>
+
+    </div>
+
+
+  </main>
+
+  
+
+  <script src="./slider.js"></script>
+
+</body>
+
+</html>

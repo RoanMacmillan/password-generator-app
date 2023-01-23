@@ -1,0 +1,214 @@
+* {
+
+    margin: 0;
+    font-family: 'JetBrains Mono', monospace;
+
+}
+
+main {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-right: 16px;
+    padding-left: 16px;
+
+}
+
+body {
+
+    background: #18171F;
+    font-size: 16px;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    color: #817D92;
+    margin-bottom: 16px;
+}
+
+#output {
+    font-size: 24px;
+}
+
+p,
+span,
+label {
+
+    color: #E6E5EA;
+}
+
+.green-text {
+
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #A4FFAF;
+}
+
+.app-container {
+
+    width: 100%;
+    height: 540px;
+}
+
+.heading-container {
+
+    height: 64px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    background: #24232C;
+    padding-left: 16px;
+    padding-right: 16px;
+
+}
+
+.main-container {
+
+    background: #24232C;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 423px;
+
+}
+
+.slider-container {
+
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0px;
+    flex-direction: column;
+    
+    
+}
+
+.length-container {
+
+    displaY: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.checkbox-container {
+
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.check-child {
+    margin-bottom: 16px;
+}
+
+input[type='checkbox'] {
+    vertical-align: top;
+    widtH: 20px;
+    height: 20px;
+    
+}
+
+
+.strength-container {
+
+    height: 56px;
+    background: #18171F;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+#str-text {
+
+    color: grey;
+    text-transform: uppercase;
+}
+
+.strength-child {
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.strength-child span {
+
+    margin-right: 8px;
+}
+
+.bar {
+
+    border: 2px solid #E6E5EA;
+    height: 24px;
+    width: 6px;
+}
+
+#copy-btn {
+
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    color: #24232C;
+    background: #A4FFAF;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.button-wrapper {
+
+    width: 100%;
+    height: 56px;
+    position: relative;
+
+}
+
+
+/* .button-effect {
+
+    position: absolute;
+    outline: 5px solid red;
+    width: 100%;
+    height: 100%;
+    top: 0;
+} */
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 576px) {
+
+
+    .app-container {
+
+        max-width: 540px;
+    }
+}
