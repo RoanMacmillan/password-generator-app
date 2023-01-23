@@ -34,6 +34,7 @@ h1 {
 
 #output {
     font-size: 24px;
+    color: #817d9277;
 }
 
 p,
@@ -49,6 +50,15 @@ label {
     font-size: 24px;
     line-height: 32px;
     color: #A4FFAF;
+}
+
+#copy-text {
+
+    margin-left: auto;
+    margin-right: 16px;
+    color: #A4FFAF;
+    opacity: 0;
+    transition: .1s ease-out;
 }
 
 .app-container {
@@ -133,7 +143,7 @@ input[type='checkbox'] {
 
 #str-text {
 
-    color: grey;
+    color: #817D92;
     text-transform: uppercase;
 }
 
@@ -157,8 +167,16 @@ input[type='checkbox'] {
 }
 
 #copy-btn {
+    pointer-events: none;
+    transition: all .2s;
+    filter: invert(70%) sepia(93%) saturate(2%) hue-rotate(252deg) brightness(66%) contrast(100%);
+}
 
+#copy-btn:hover {
+
+    filter: invert(00%) sepia(100%) saturate(1%) hue-rotate(306deg) brightness(103%) contrast(101%) !important;
     cursor: pointer;
+
 }
 
 button {
@@ -169,14 +187,49 @@ button {
     font-weight: 700;
     font-size: 16px;
     line-height: 21px;
-    color: #24232C;
-    background: #A4FFAF;
+    color: #817d9263;
+    background: #18171F;
     border: none;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 16px;
+    transition: .1s ease-in;
+    pointer-events: none;
 }
+
+button:hover {
+
+    color: #A4FFAF;
+    border: 2px solid #A4FFAF;
+    background: #24232C;
+}
+
+.enableBtn {
+    background: #A4FFAF;
+    color: #24232C;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.enableCopy {
+
+    filter: none !important;
+    pointer-events: all !important;
+
+}
+
+.enablePw {
+
+    color: #E6E5EA !important;
+}
+
+/* button:hover {
+    background-color: #24232C;
+    color: #A4FFAF;
+    border: 2px solid #A4FFAF;
+    
+} */
 
 .button-wrapper {
 
@@ -187,22 +240,35 @@ button {
 }
 
 
-/* .button-effect {
+.red {
 
-    position: absolute;
-    outline: 5px solid red;
-    width: 100%;
-    height: 100%;
-    top: 0;
-} */
+    background-color: #F64A4A;
+    border: 2px solid #F64A4A;
+}
 
 
+.orange {
 
+    background-color: #FB7C58;
+    border: 2px solid #FB7C58;
+}
 
+.yellow {
 
+    background-color: #F8CD65;
+    border: 2px solid #F8CD65;
+}
 
+.green {
 
+    background-color: #A4FFAF;
+    border: 2px solid #A4FFAF;
+}
 
+.strength-child span {
+
+    text-transform: uppercase;
+}
 
 @media screen and (min-width: 576px) {
 
@@ -211,4 +277,94 @@ button {
 
         max-width: 540px;
     }
+}
+
+
+@media screen and (min-width: 576px) {
+
+.strength-container,
+main,
+.heading-container,
+.main-container {
+
+    padding-left: 32px;
+    padding-right: 32px;
+}
+    
+.heading-container {
+
+    margin-bottom: 24px;
+    height: 80px;
+}
+
+.length-container {
+    height: 43px;
+    margin-top: 24px;
+}
+
+.slider-container {
+
+    padding-top: 0;
+}
+
+.main-container {
+    height: 528px;
+}
+
+.strength-container {
+
+    height: 72px;
+    margin-bottom: 32px;
+}
+
+.app-container {
+
+    height: 632px;
+}
+
+.button-wrapper {
+
+    height: 65px;
+}
+
+.check-child {
+
+    margin-bottom: 20px;
+}
+
+.checkbox-container {
+
+    margin-bottom: 12px;
+}
+
+
+h1 {
+
+    margin-bottom: 31px;
+    font-size: 24px;
+}
+
+.strength-child span {
+
+    font-size: 24px;
+}
+
+#str-text,
+.check-child label,
+.btn-2,
+.length-container span
+
+{
+
+    font-size: 18px;
+}
+
+
+
+.green-text {
+
+    font-size: 32px !important;
+}
+
+
 }

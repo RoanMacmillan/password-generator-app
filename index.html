@@ -18,15 +18,17 @@
 <body>
 
   <main>
+    <h1>Password Generator</h1>
 
     <div class="app-container">
 
-      <h1>Password Generator</h1>
 
 
       <div class="heading-container">
 
         <span id="output">P4$5W0rD!</span>
+
+        <span id="copy-text">COPIED!</span>
 
         <img id="copy-btn" src="./starter-code/assets/images/icon-copy.svg" alt="Copy Button">
 
@@ -40,7 +42,7 @@
           <span>Character Length</span>
           <span id="range-slider__value" class="green-text">10</span>
           </div>
-          <input id="myinput" min="0" max="100" type="range" value="50" />
+          <input id="myinput" min="1" max="20" type="range" value="10" />
         </div>
 
         <div class="checkbox-container">
@@ -96,7 +98,7 @@
           <span id="str-text">Strength</span>
 
           <div class="strength-child">
-          <span>MEDIUM</span>
+          <span id="rating"></span>
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
@@ -118,7 +120,7 @@
   </main>
 
   
-
+  <script src="./main.js"></script>
   <script src="./slider.js"></script>
 
 </body>
