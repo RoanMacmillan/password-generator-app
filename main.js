@@ -62,13 +62,13 @@ generateBtn.addEventListener("click", function () {
         password += possibleCharacters.charAt(Math.floor(Math.random() * possibleCharacters.length));
     }
 
-    if (selectedLength < 8) {
+    if (selectedLength < 7) {
         passwordStrength = 'too-weak';
-    } else if (selectedLength >= 8 && selectedLength < 10) {
+    } else if (selectedLength >= 7 && selectedLength < 9) {
         passwordStrength = 'weak';
-    } else if (selectedLength >= 10 && selectedLength < 15) {
+    } else if (selectedLength >= 9 && selectedLength < 13) {
         passwordStrength = 'medium';
-    } else if (selectedLength >= 15) {
+    } else if (selectedLength >= 13) {
         passwordStrength = 'strong';
     }  
 
@@ -132,10 +132,3 @@ checkbox.forEach(input => {
     })
 });
 
-const arrow = document.getElementById('arrow');
-
- generateBtn.addEventListener('mouseover', function() {
-
-arrow.classList.add = 'hoverToggle'
-
- })
