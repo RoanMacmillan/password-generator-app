@@ -44,6 +44,10 @@ label {
     color: #E6E5EA;
 }
 
+.range-label {
+    width: 100%;
+}
+
 .green-text {
 
     font-weight: 700;
