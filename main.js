@@ -13,24 +13,20 @@ copyBtn.addEventListener("click", function () {
     document.execCommand("copy");
     document.body.removeChild(tempInput);
     copyText.style.opacity = '1';
-
     setTimeout(function () {
         copyText.style.opacity = '0';
     }, 1500);
-
 
 });
 
 // Inserting the range slider value to target element
 const rangeSlider = document.getElementById('myinput');
 const targetElement = document.querySelector('.green-text');
-
 rangeSlider.addEventListener("input", function () {
     targetElement.innerHTML = this.value;
 });
 
 // Generate a random password depending on user specification
-
 const includeUppercase = document.getElementById("uppercase");
 const includeLowercase = document.getElementById("lowercase");
 const includeNumbers = document.getElementById("numbers");
@@ -39,7 +35,7 @@ const generateBtn = document.querySelector('.btn-2')
 const pwTargetElement = document.getElementById('output');
 let passwordStrength = "";
 generateBtn.addEventListener("click", function () {
-    let possibleCharacters = "abcdefghijklmnopqrstuvwxyz";
+    let possibleCharacters = "";
     let password = "";
     let selectedLength = rangeSlider.value;
     let complexity = 0;
@@ -58,37 +54,41 @@ generateBtn.addEventListener("click", function () {
     }
     if (includeSymbols.checked) {
         possibleCharacters += "!@#$%^&*()_+-=[]{}|;':\"<>,.?/\\";
-        complexity++;
+        complexity += 2;
     }
 
+    
     for (let i = 0; i < selectedLength; i++) {
         password += possibleCharacters.charAt(Math.floor(Math.random() * possibleCharacters.length));
     }
 
-    if (selectedLength < 7) {
+    if (selectedLength < 8) {
         passwordStrength = 'too-weak';
-    } else if (selectedLength >= 7 && selectedLength < 9) {
+    } else if (selectedLength >= 8 && selectedLength < 10) {
         passwordStrength = 'weak';
-    } else if (selectedLength >= 9 && selectedLength < 12) {
+    } else if (selectedLength >= 10 && selectedLength < 15) {
         passwordStrength = 'medium';
-    } else if (selectedLength >= 12) {
+    } else if (selectedLength >= 15) {
         passwordStrength = 'strong';
     }  
 
     if (selectedLength < 6) {
         passwordStrength = 'too-weak';
-    } else if (selectedLength >= 6 && selectedLength < 8 && complexity > 3) {
+    } else if (selectedLength >= 6 && selectedLength < 8 && complexity >= 4) {
         passwordStrength = 'weak';
-    } else if (selectedLength >= 8 && selectedLength < 11 && complexity > 3) {
+    } else if (selectedLength >= 8 && selectedLength < 12 && complexity >= 4) {
         passwordStrength = 'medium';
-    } else if (selectedLength >= 11 && complexity > 3) {
+    } else if (selectedLength >= 12 && complexity >= 4) {
         passwordStrength = 'strong';
     }  
-
+    // Enables copy button when a password is insered to target element
     copyBtn.classList.add('enableCopy');
+    // Adds active styles to target element
     pwTargetElement.classList.add('enablePw');
+    // updates strength bar styles
     updateBars(passwordStrength);
-    pwTargetElement.innerHTML = password;
+    // insets Pw to target element
+    pwTargetElement.innerText = password;
 });
 
 
@@ -117,10 +117,9 @@ function updateBars(passwordStrength) {
     }
 }
 
-
+// Only lets user proceed if >= 3 options are checked
 const checkbox = document.querySelectorAll('.checkbox-container input[type="checkbox"]');
 let checkedCounter = 0;
-
 checkbox.forEach(input => {
     input.addEventListener('click', function() {
         if (this.checked) {
@@ -128,8 +127,15 @@ checkbox.forEach(input => {
         } else {
             checkedCounter--;
         }
+        // Enables generate button
         generateBtn.classList.toggle('enableBtn', checkedCounter >= 3);
     })
 });
 
- 
+const arrow = document.getElementById('arrow');
+
+ generateBtn.addEventListener('mouseover', function() {
+
+arrow.classList.add = 'hoverToggle'
+
+ })

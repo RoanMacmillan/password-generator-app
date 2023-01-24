@@ -169,7 +169,7 @@ input[type='checkbox'] {
 #copy-btn {
     pointer-events: none;
     transition: all .2s;
-    filter: invert(70%) sepia(93%) saturate(2%) hue-rotate(252deg) brightness(66%) contrast(100%);
+    /* filter: invert(70%) sepia(93%) saturate(2%) hue-rotate(252deg) brightness(66%) contrast(100%); */
 }
 
 #copy-btn:hover {
@@ -205,6 +205,10 @@ button:hover {
     background: #24232C;
 }
 
+.btn-2:hover span img {
+    filter: invert(81%) sepia(71%) saturate(234%) hue-rotate(65deg) brightness(101%) contrast(102%) !important;
+  }
+
 .enableBtn {
     background: #A4FFAF;
     color: #24232C;
@@ -218,6 +222,8 @@ button:hover {
     pointer-events: all !important;
 
 }
+
+
 
 .enablePw {
 
@@ -330,6 +336,7 @@ main,
 .check-child {
 
     margin-bottom: 20px;
+    
 }
 
 .checkbox-container {
@@ -355,15 +362,17 @@ h1 {
 .length-container span
 
 {
-
     font-size: 18px;
 }
-
-
 
 .green-text {
 
     font-size: 32px !important;
+}
+
+label {
+
+    font-size: 18px !important;
 }
 
 
