@@ -48,6 +48,11 @@ label {
     width: 100%;
 }
 
+.smallText {
+
+    font-size: 16px !important;
+}
+
 .green-text {
 
     font-weight: 700;

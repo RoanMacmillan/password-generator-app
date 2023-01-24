@@ -87,6 +87,8 @@ generateBtn.addEventListener("click", function () {
     pwTargetElement.classList.add('enablePw');
     // updates strength bar styles
     updateBars(passwordStrength);
+    //
+    handleLongOutput();
     // insets Pw to target element
     pwTargetElement.innerText = password;
 });
@@ -132,3 +134,15 @@ checkbox.forEach(input => {
     })
 });
 
+// Decreases font-size of pw output if too big for container
+function handleLongOutput() {
+
+    if (rangeSlider.value >= 15) {
+
+        elementToCopy.classList.add('smallText');
+    } else {
+
+        elementToCopy.classList.remove('smallText');
+    }
+
+}
